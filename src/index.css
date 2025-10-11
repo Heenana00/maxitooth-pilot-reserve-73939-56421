@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Maxitooth Monochrome Design System */
+    --jet-black: 0 0% 5.5%;
+    --graphite: 0 0% 42%;
+    --silver: 0 0% 75%;
+    --soft-white: 0 0% 97.6%;
+    --pure-white: 0 0% 100%;
+    
+    /* Semantic tokens */
+    --background: var(--soft-white);
+    --foreground: var(--jet-black);
+
+    --card: var(--pure-white);
+    --card-foreground: var(--jet-black);
+
+    --popover: var(--pure-white);
+    --popover-foreground: var(--jet-black);
+
+    --primary: var(--jet-black);
+    --primary-foreground: var(--soft-white);
+
+    --secondary: var(--graphite);
+    --secondary-foreground: var(--soft-white);
+
+    --muted: var(--silver);
+    --muted-foreground: var(--graphite);
+
+    --accent: var(--silver);
+    --accent-foreground: var(--jet-black);
+
+    --destructive: 0 0% 30%;
+    --destructive-foreground: var(--soft-white);
+
+    --border: var(--silver);
+    --input: var(--silver);
+    --ring: var(--graphite);
+
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-black-grey: linear-gradient(135deg, hsl(var(--jet-black)) 0%, hsl(var(--graphite)) 100%);
+    --gradient-grey-white: linear-gradient(180deg, hsl(var(--graphite)) 0%, hsl(var(--soft-white)) 100%);
+    --gradient-white-silver: linear-gradient(135deg, hsl(var(--soft-white)) 0%, hsl(var(--silver)) 100%);
+    
+    /* Shadows - Enhanced for luxury feel */
+    --shadow-soft: 0 4px 24px -4px hsl(var(--jet-black) / 0.08);
+    --shadow-medium: 0 8px 32px -8px hsl(var(--jet-black) / 0.12);
+    --shadow-hard: 0 20px 60px -20px hsl(var(--jet-black) / 0.25);
+    --shadow-glow: 0 0 32px hsl(var(--silver) / 0.3);
+    --shadow-luxury: 0 25px 50px -12px hsl(var(--jet-black) / 0.15);
+    
+    /* Glassmorphism */
+    --glass-bg: hsl(var(--soft-white) / 0.05);
+    --glass-border: hsl(var(--silver) / 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-luxury: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: var(--jet-black);
+    --foreground: var(--soft-white);
+
+    --card: 0 0% 8%;
+    --card-foreground: var(--soft-white);
+
+    --popover: 0 0% 8%;
+    --popover-foreground: var(--soft-white);
+
+    --primary: var(--soft-white);
+    --primary-foreground: var(--jet-black);
+
+    --secondary: var(--graphite);
+    --secondary-foreground: var(--soft-white);
+
+    --muted: var(--graphite);
+    --muted-foreground: var(--silver);
+
+    --accent: var(--graphite);
+    --accent-foreground: var(--soft-white);
+
+    --destructive: 0 0% 45%;
+    --destructive-foreground: var(--soft-white);
+
+    --border: var(--graphite);
+    --input: var(--graphite);
+    --ring: var(--silver);
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    cursor: none;
+  }
+  
+  * {
+    cursor: none;
+  }
+  
+  @media (max-width: 768px) {
+    body, * {
+      cursor: auto;
+    }
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-gradient-silver {
+    @apply bg-gradient-to-r from-graphite via-silver to-graphite bg-clip-text text-transparent;
+  }
+  
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+  
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+  }
+  
+  .luxury-shadow {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .parallax-slow {
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
