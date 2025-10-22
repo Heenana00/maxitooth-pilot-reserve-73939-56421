@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/maxitooth_logo_full.png";
+import logo from "@/assets/maxitooth_logo_new.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {

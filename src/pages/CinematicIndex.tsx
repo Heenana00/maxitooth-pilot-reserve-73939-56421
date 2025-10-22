@@ -9,7 +9,6 @@ import CinematicTestimonials from "@/components/CinematicTestimonials";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import CinematicOutro from "@/components/CinematicOutro";
-import MagneticCursor from "@/components/MagneticCursor";
 
 const CinematicIndex = () => {
   useEffect(() => {
@@ -26,7 +25,6 @@ const CinematicIndex = () => {
 
   return (
     <div className="relative">
-      <MagneticCursor />
       <Navigation />
       <CinematicHero />
       <CinematicAbout />

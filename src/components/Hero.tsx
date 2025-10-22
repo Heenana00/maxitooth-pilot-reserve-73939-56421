@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import tubeMaxi from "@/assets/tube_maxi.jpg";
-import logo from "@/assets/maxitooth_logo_full.png";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -18,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-soft-white pt-20">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-soft-white">
       {/* Floating particles effect */}
       <div className="absolute inset-0 opacity-10">
         {[...Array(20)].map((_, i) => (
@@ -38,15 +37,8 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
-          <div className="text-center lg:text-left space-y-12 animate-fade-in">
+          <div className="text-center lg:text-left space-y-8 animate-fade-in">
             <div className="space-y-6">
-              <div className="inline-block mb-8">
-                <img 
-                  src={logo} 
-                  alt="MaxiTooth - Advanced Natural Care" 
-                  className="h-32 w-auto"
-                />
-              </div>
               <h1 className="text-6xl md:text-8xl font-bold text-jet-black leading-[0.95] tracking-tight">
                 Maxitooth for your sexy tooth
               </h1>

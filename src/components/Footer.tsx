@@ -1,4 +1,4 @@
-import logo from "@/assets/maxitooth_logo_full.png";
+import logo from "@/assets/maxitooth_logo_new.jpg";
 
 const Footer = () => {
   return (
