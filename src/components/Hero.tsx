@@ -17,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-soft-white">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-soft-white pt-28">
       {/* Floating particles effect */}
       <div className="absolute inset-0 opacity-10">
         {[...Array(20)].map((_, i) => (
