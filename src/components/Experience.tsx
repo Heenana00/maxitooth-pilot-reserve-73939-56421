@@ -1,4 +1,4 @@
-import tubeMaxi from "@/assets/tube_maxi.jpg";
+import manufacturingUnit from "@/assets/manufacturing_unit.png";
 
 const Experience = () => {
   return (
@@ -8,13 +8,13 @@ const Experience = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
-          {/* Product Image */}
+          {/* Manufacturing Unit Image */}
           <div className="relative animate-fade-in group">
-            <div className="relative z-10 glass-effect rounded-3xl p-16 luxury-shadow">
+            <div className="relative z-10 rounded-3xl overflow-hidden luxury-shadow">
               <img
-                src={tubeMaxi}
-                alt="Maxitooth Advanced Natural Care - Premium Toothpaste Detail"
-                className="w-full max-w-md mx-auto drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-1000"
+                src={manufacturingUnit}
+                alt="Maxitooth Manufacturing Unit - State-of-the-art Production Facility"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
               />
             </div>
             {/* Enhanced decorative elements */}
@@ -49,17 +49,6 @@ const Experience = () => {
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-8 pt-8">
-              <div className="space-y-3 border-l-2 border-silver/20 pl-6 hover:border-silver/40 transition-colors duration-500">
-                <div className="text-5xl font-light text-soft-white">2+</div>
-                <div className="text-xs text-silver/50 tracking-wider uppercase">Years Development</div>
-              </div>
-              <div className="space-y-3 border-l-2 border-silver/20 pl-6 hover:border-silver/40 transition-colors duration-500">
-                <div className="text-5xl font-light text-soft-white">500+</div>
-                <div className="text-xs text-silver/50 tracking-wider uppercase">Beta Testers</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

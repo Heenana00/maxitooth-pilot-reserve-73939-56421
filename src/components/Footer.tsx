@@ -1,4 +1,4 @@
-import logo from "@/assets/maxitooth_logo.jpg";
+import logo from "@/assets/maxitooth_logo_full.png";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Logo & Tagline */}
           <div className="space-y-4">
-            <img src={logo} alt="Maxitooth" className="h-16 w-auto brightness-0 invert" />
+            <img src={logo} alt="MaxiTooth - Advanced Natural Care" className="h-20 w-auto" />
             <p className="text-sm text-silver/70">
               Advanced Natural Care for the modern generation.
             </p>
@@ -28,8 +28,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#careers" className="hover:text-soft-white transition-colors">
-                  Careers
+                <a href="/our-products" className="hover:text-soft-white transition-colors">
+                  Our Products
                 </a>
               </li>
             </ul>
@@ -62,11 +62,21 @@ const Footer = () => {
         <div className="border-t border-graphite/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-silver/70">
           <p>© 2025 Maxitooth. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-soft-white transition-colors">
+            <a 
+              href="https://www.instagram.com/maxitooth/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-soft-white transition-colors"
+            >
               Instagram
             </a>
-            <a href="#" className="hover:text-soft-white transition-colors">
-              Twitter
+            <a 
+              href="https://medial.app/user/maxitooth-e17e52b233f16" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-soft-white transition-colors"
+            >
+              Medial
             </a>
             <a href="#" className="hover:text-soft-white transition-colors">
               LinkedIn

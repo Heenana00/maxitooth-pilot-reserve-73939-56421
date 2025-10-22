@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import tubeMaxi from "@/assets/tube_maxi.jpg";
+import logo from "@/assets/maxitooth_logo_full.png";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -17,13 +18,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-black-grey pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-soft-white pt-20">
       {/* Floating particles effect */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-10">
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-silver rounded-full animate-float"
+            className="absolute w-1 h-1 bg-graphite rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -39,44 +40,45 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-center lg:text-left space-y-12 animate-fade-in">
             <div className="space-y-6">
-              <div className="inline-block">
-                <span className="text-xs tracking-[0.3em] text-silver/60 uppercase font-light">
-                  Pilot Launch 2025
-                </span>
+              <div className="inline-block mb-8">
+                <img 
+                  src={logo} 
+                  alt="MaxiTooth - Advanced Natural Care" 
+                  className="h-32 w-auto"
+                />
               </div>
-              <h1 className="text-6xl md:text-8xl font-bold text-soft-white leading-[0.95] tracking-tight">
-                Advanced<br />
-                Natural Care.{" "}
-                <span className="text-gradient-silver block mt-2">Modern Design.</span>
+              <h1 className="text-6xl md:text-8xl font-bold text-jet-black leading-[0.95] tracking-tight">
+                Maxitooth for your sexy tooth
               </h1>
-              <p className="text-xl md:text-2xl text-silver/80 font-light max-w-xl leading-relaxed">
+              <p className="text-xl md:text-2xl text-graphite font-light max-w-xl leading-relaxed">
                 Precision-engineered oral care. Refined for the modern individual.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
-                variant="premium"
+                variant="default"
                 size="xl"
                 onClick={() => {
-                  document.getElementById("pre-order")?.scrollIntoView({ behavior: "smooth" });
+                  window.open("https://docs.google.com/forms/d/e/1FAIpQLScRNvwTdFNPR82fv994G6MuVZ1-PGBUP2vdPQAKV57iEWF9fQ/viewform?pli=1", "_blank");
                 }}
+                className="bg-jet-black text-soft-white hover:bg-jet-black/90"
               >
-                Reserve Your Spot (₹199)
+                Pre-Order Now (₹99)
               </Button>
             </div>
 
-            <div className="flex items-center gap-6 justify-center lg:justify-start text-sm text-silver">
+            <div className="flex items-center gap-6 justify-center lg:justify-start text-sm text-graphite">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-silver rounded-full"></div>
+                <div className="w-2 h-2 bg-graphite rounded-full"></div>
                 <span>Made in India</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-silver rounded-full"></div>
+                <div className="w-2 h-2 bg-graphite rounded-full"></div>
                 <span>Dentist Approved</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-silver rounded-full"></div>
+                <div className="w-2 h-2 bg-graphite rounded-full"></div>
                 <span>Cruelty-Free</span>
               </div>
             </div>
@@ -92,7 +94,7 @@ const Hero = () => {
             }}
           >
             {/* Glass container for product */}
-            <div className="relative z-10 glass-effect rounded-3xl p-12 luxury-shadow">
+            <div className="relative z-10 bg-soft-white/50 backdrop-blur-sm border border-graphite/10 rounded-3xl p-12 shadow-luxury">
               <img
                 src={tubeMaxi}
                 alt="Maxitooth Premium Natural Oral Care - Advanced Toothpaste"
@@ -100,16 +102,16 @@ const Hero = () => {
               />
             </div>
             {/* Enhanced glow effect */}
-            <div className="absolute inset-0 bg-silver/20 blur-[120px] rounded-full animate-pulse"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-silver/10 to-transparent rounded-full"></div>
+            <div className="absolute inset-0 bg-graphite/10 blur-[120px] rounded-full animate-pulse"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-graphite/5 to-transparent rounded-full"></div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-silver rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-silver rounded-full"></div>
+        <div className="w-6 h-10 border-2 border-graphite rounded-full flex items-start justify-center p-2">
+          <div className="w-1 h-2 bg-graphite rounded-full"></div>
         </div>
       </div>
     </section>

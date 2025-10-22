@@ -11,16 +11,16 @@ const About = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
-          {/* Video placeholder */}
-          <div className="relative aspect-[4/5] bg-gradient-grey-white rounded-3xl overflow-hidden luxury-shadow group">
-            <div className="absolute inset-0 flex items-center justify-center bg-jet-black/5 backdrop-blur-sm">
-              <div className="text-center space-y-6">
-                <div className="w-24 h-24 mx-auto bg-jet-black/10 rounded-full flex items-center justify-center backdrop-blur-md border border-silver/20 group-hover:scale-110 transition-transform duration-500">
-                  <div className="w-0 h-0 border-t-[14px] border-t-transparent border-l-[22px] border-l-jet-black border-b-[14px] border-b-transparent ml-2"></div>
-                </div>
-                <p className="text-jet-black/60 text-sm tracking-wider uppercase font-light">Product Story</p>
-              </div>
-            </div>
+          {/* Instagram Video Embed */}
+          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden luxury-shadow">
+            <iframe
+              src="https://www.instagram.com/reel/DPoklSGjtFc/embed"
+              className="w-full h-full"
+              frameBorder="0"
+              scrolling="no"
+              allowTransparency={true}
+              allow="encrypted-media"
+            />
           </div>
 
           {/* Story Text */}

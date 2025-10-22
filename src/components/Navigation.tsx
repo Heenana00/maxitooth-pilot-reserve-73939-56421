@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/maxitooth_logo.jpg";
+import logo from "@/assets/maxitooth_logo_full.png";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +26,11 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center space-x-3 group">
+          <a href="/" className="flex items-center space-x-3 group">
             <img
               src={logo}
-              alt="Maxitooth"
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+              alt="MaxiTooth - Advanced Natural Care"
+              className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </a>
 
@@ -36,32 +38,26 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#about"
-              className="text-sm font-medium text-soft-white/80 hover:text-soft-white transition-colors duration-300"
+              className="text-sm font-medium text-jet-black/80 hover:text-jet-black transition-colors duration-300"
             >
-              Story
+              About Us
             </a>
-            <a
-              href="#features"
-              className="text-sm font-medium text-soft-white/80 hover:text-soft-white transition-colors duration-300"
+            <button
+              onClick={() => navigate("/our-products")}
+              className="text-sm font-medium text-jet-black/80 hover:text-jet-black transition-colors duration-300"
             >
-              Benefits
-            </a>
-            <a
-              href="#experience"
-              className="text-sm font-medium text-soft-white/80 hover:text-soft-white transition-colors duration-300"
-            >
-              Design
-            </a>
+              Our Products
+            </button>
           </div>
 
           {/* CTA */}
           <Button
-            variant="premium"
+            variant="default"
             size="sm"
             onClick={() => {
-              document.getElementById("pre-order")?.scrollIntoView({ behavior: "smooth" });
+              window.open("https://docs.google.com/forms/d/e/1FAIpQLScRNvwTdFNPR82fv994G6MuVZ1-PGBUP2vdPQAKV57iEWF9fQ/viewform?pli=1", "_blank");
             }}
-            className="hidden md:inline-flex"
+            className="hidden md:inline-flex bg-jet-black text-soft-white hover:bg-jet-black/90"
           >
             Pre-Order
           </Button>
